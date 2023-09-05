@@ -32,6 +32,9 @@ app.MapPost("/categories", (Category category) =>
     return Results.Ok();
 });
 
+//APP RUN
+app.Run();
+
 internal class Category
 {
     public int Id { get; set; }
