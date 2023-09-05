@@ -25,6 +25,13 @@ app.MapGet("/categories", () =>
     return categories;
 });
 
+//
+app.MapPost("/categories", (Category category) =>
+{
+    categories.Add(category);
+    return Results.Ok();
+});
+
 internal class Category
 {
     public int Id { get; set; }
