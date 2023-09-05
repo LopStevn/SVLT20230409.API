@@ -16,3 +16,20 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+//Crear una lista para almacenar objetos
+var categories = new List<Category>();
+
+//
+app.MapGet("/categories", () =>
+{
+    return categories;
+});
+
+internal class Category
+{
+    public int Id { get; set; }
+
+    public string? Name { get; set; }
+
+    public string? Stock { get; set; }
+}
